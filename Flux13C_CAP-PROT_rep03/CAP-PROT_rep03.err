@@ -1,0 +1,13 @@
+warning in first optimization pass: 
+lsi_ln: Rank deficient matrix in least squares
+2 free variable(s):
+f.x.ald	13
+f.x.tpi	24
+Least L2-norm solution is provided.
+nlsic: Maximal non linear iteration number is achieved
+Inverse of covariance matrix is numerically singular.
+Statistically undefined parameter(s) seems to be:
+f.x.ald
+f.x.tpi
+For more complete list, see sd columns in '/linear stats'
+in the result file.

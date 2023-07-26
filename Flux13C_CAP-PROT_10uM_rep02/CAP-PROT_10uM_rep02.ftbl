@@ -1,0 +1,559 @@
+PROJECT
+	NAME	VERSION	FORMAT	DATE	COMMENT
+	P_putida_v1.ftbl	1		15022021	Central metabolism of P. putida
+
+NETWORK
+	FLUX_NAME	EDUCT_1	EDUCT_2	PRODUCT_1	PRODUCT_2
+
+// Label inputs definition
+
+	Glc_in_1	Glc_1		Glc
+		#ABCDEF		#ABCDEF
+
+	Glc_in_U	Glc_U		Glc
+		#ABCDEF		#ABCDEF
+
+	CO2_in	CO2_ext		CO2
+		#A		#A
+
+
+// Periplasmic reactions
+
+	gcd	Glc		Gnt
+		#ABCDEF		#ABCDEF
+
+	gad	Gnt		Kdg
+		#ABCDEF		#ABCDEF
+
+
+// Uptake substrates
+
+	glk	Glc		Glc6P
+		#ABCDEF		#ABCDEF
+
+	gntk	Gnt		Gnt6P
+		#ABCDEF		#ABCDEF
+
+	kdgk	Kdg		K26pg
+		#ABCDEF		#ABCDEF
+
+	kgud	K26pg		Gnt6P
+		#ABCDEF		#ABCDEF
+
+
+// Embden Meyerhof Parnas Pathway
+
+	pgi	Fru6P		Glc6P
+		#ABCDEF		#ABCDEF
+
+	fba	FruBP		Fru6P
+		#ABCDEF		#ABCDEF
+
+	ald	DHAP	GA3P	FruBP
+		#CBA	#DEF	#ABCDEF
+
+	tpi	GA3P		DHAP
+		#ABC		#ABC
+
+	pgk	GA3P		PGA
+		#ABC		#ABC
+
+	eno	PGA		PEP
+		#ABC		#ABC
+
+	pyk	PEP		Pyr
+		#ABC		#ABC
+
+
+// Pentose Phosphate Pathway
+
+	zwf	Glc6P		Gnt6P
+		#ABCDEF		#ABCDEF
+
+	gnd	Gnt6P		CO2 	Rib5P
+		#ABCDEF		#A	#BCDEF
+
+	tk1	Rib5P		GA3P	E2
+		#ABCDE		#CDE	#AB
+
+	tk2	Ery4P	E2	Fru6P
+		#CDEF	#AB	#ABCDEF
+
+	tk3	Rib5P	E2	Sed7P
+		#ABCDE	#ab	#abABCDE
+
+	ta1	GA3P	E3	Fru6P
+		#DEF	#ABC	#ABCDEF
+
+	ta2	Sed7P		Ery4P	E3
+		#abcABCD		#ABCD	#abc
+
+
+// Entner-Doudoroff pathway
+
+	edd	Gnt6P		Kdpg
+		#ABCDEF		#ABCDEF
+
+	eda	Kdpg		Pyr	GA3P
+		#ABCDEF		#ABC	#DEF
+
+
+// Tricarboxylic Acid Cycle
+
+	pdh	Pyr		AcCoA	CO2
+		#ABC		#BC	#A
+
+	citsynth	AcCoA	OAA	ICit
+		#AB	#abcd	#dcbaBA
+
+	idh	ICit		AKG	CO2
+		#ABCDEF		#ABCEF	#D
+
+	akgdh	AKG		Suc	CO2
+		#ABCDE		#BCDE	#A
+
+	fum_a	Suc		Mal
+		#ABCD		#ABCD
+
+	fum_b	Suc		Mal
+		#ABCD		#DCBA
+
+	maldh	Mal		OAA
+		#ABCD		#ABCD
+
+
+// Glyoxylate Shunt
+
+	aceA	ICit		GlyOx	Suc
+		#ABCDEF		#AB	#DCEF
+
+	aceB	GlyOx	AcCoA	OAA
+		#AB	#ab	#ABba
+
+
+// Anaplerotic Reactions
+
+	ppc	OAA		PEP	CO2
+		#ABCD		#ABC	#D
+
+	mae	Mal		Pyr	CO2
+		#ABCD		#ABC	#D
+
+	pyc	Pyr	CO2	OAA
+		#ABC	#D	#ABCD
+
+
+// Biosynthetic Pathways
+
+	// Glucose-6-Phosphate Family
+
+	bs_glc6P	Glc6P		BM_Glc6P
+		#ABCDEF		#ABCDEF
+
+	bs_fru6P	Fru6P		BM_Fru6P
+		#ABCDEF		#ABCDEF
+
+	bs_ga3p	GA3P		BM_GA3P
+		#ABC		#ABC
+
+	bs_pga	PGA		BM_PGA
+		#ABC		#ABC
+
+	bs_pyr	Pyr		BM_Pyr
+		#ABC		#ABC
+
+	bs_e4p	Ery4P		BM_Ery4P
+		#ABCD		#ABCD
+
+	bs_rib5p	Rib5P		BM_Rib5P
+		#ABCDE		#ABCDE
+
+	bs_pep	PEP		BM_PEP
+		#ABC		#ABC
+
+	bs_accoa	AcCoA		BM_AcCoA
+		#AB		#AB
+
+	bs_akg	AKG		BM_AKG
+		#ABCDE		#ABCDE
+
+	bs_oaa	OAA		BM_OAA
+		#ABCD		#ABCD
+
+//Prot synthesis
+
+	bsp_rib5p	Rib5P		prot_Rib5P
+		#ABCDE		#ABCDE
+
+	bsp_e4p	Ery4P		prot_Ery4P
+		#ABCD		#ABCD
+
+	bsp_pga	PGA		prot_PGA
+		#ABC		#ABC
+
+	bsp_pep	PEP		prot_PEP
+		#ABC		#ABC
+
+	bsp_pyr	Pyr		prot_Pyr
+		#ABC		#ABC
+
+	bsp_accoa	AcCoA		prot_AcCoA
+		#AB		#AB
+
+	bsp_oaa	OAA		prot_OAA
+		#ABCD		#ABCD
+
+	bsp_akg	AKG		prot_AKG
+		#ABCDE		#ABCDE
+
+// Output fluxes
+
+	out_Gnt	Gnt		Gnt_out
+		#ABCDEF		#ABCDEF
+
+	out_Kdg	Kdg		Kdg_out
+		#ABCDEF		#ABCDEF
+
+	out_co2	CO2		CO2_out
+		#A		#A
+
+
+FLUXES
+	NET
+		NAME	FCD	VALUE(F/C)	ED_WEIGHT	LOW(F)	INC(F)	UP(F)
+
+		BM	F	0.08		// biomass yield (gDW/mmol_Glc)
+		prot	F	0.0026885		// protein yield (gprot/mmol_Glc)
+
+		Glc_in_1	F	0.8
+		Glc_in_U	D
+		CO2_in	F	1.0
+
+		gcd	D	0.7
+		gad	D	0.1
+
+		glk	F	0.3
+		gntk	D
+		kdgk	F	0.1
+		kgud	D
+
+		pgi	D
+		fba	D
+		ald	D
+		tpi	D
+		pgk	D
+		eno	D
+		pyk	F	0.4
+
+		zwf	F	0.5
+		gnd	F	0.1
+		edd	D
+		eda	D
+
+		tk1	D
+		tk2	D
+		tk3	D
+		ta1	D
+		ta2	D
+
+		pdh	F	1.4
+		citsynth	D
+		idh	D
+		akgdh	D
+		fum_a	D
+		fum_b	D
+		maldh	D
+
+		aceA	D
+		aceB	D
+
+		ppc	D
+		mae	D
+		pyc	F	0.4
+
+		// biomass fluxes
+
+		bs_glc6P	D
+		bs_fru6P	D
+		bs_ga3p	D
+		bs_pga	D
+		bs_pyr	D
+		bs_e4p	D
+		bs_rib5p	D
+		bs_pep	D
+		bs_accoa	D
+		bs_akg	D
+		bs_oaa	D
+
+		// Protein fluxes
+
+		bsp_rib5p	D
+		bsp_e4p	D
+		bsp_pga	D
+		bsp_pep	D
+		bsp_pyr	D
+		bsp_accoa	D
+		bsp_oaa	D
+		bsp_akg	D
+
+
+		// Output fluxes
+
+		out_Gnt	D	0.05
+		out_Kdg	F	0.05
+		out_co2	D
+
+
+	XCH
+		NAME	FCD	VALUE(F/C)	ED_WEIGHT	LOW(F)	INC(F)	UP(F)
+
+		BM	C	0
+		prot	C	0
+
+		Glc_in_1	D
+		Glc_in_U	D
+		CO2_in	D
+
+		gcd	C	0
+		gad	C	0
+
+		glk	C	0
+		gntk	C	0
+		kdgk	C	0
+		kgud	C	0
+
+		pgi	F	0.8
+		fba	C	0
+		ald	F	0.5
+		tpi	F	0.5
+		pgk	F	0.99
+		eno	F	0.99
+		pyk	C	0.0
+
+		zwf	C	0
+		gnd	C	0
+		edd	C	0
+		eda	C	0
+
+		tk1	F	0.1
+		tk2	F	0.1
+		tk3	F	0.1
+		ta1	F	0.1
+		ta2	F	0.1
+
+		pdh	C	0
+		citsynth	C	0
+		idh	C	0
+		akgdh	C	0
+		fum_a	F	0.259945
+		fum_b	D
+		maldh	F	0.727373
+
+		aceA	C	0
+		aceB	C	0
+
+		ppc	C	0
+		mae	C	0
+		pyc	C	0
+
+		bs_glc6P	D
+		bs_fru6P	D
+		bs_ga3p	D
+		bs_pga	D
+		bs_pyr	D
+		bs_e4p	D
+		bs_rib5p	D
+		bs_pep	D
+		bs_accoa	D
+		bs_akg	D
+		bs_oaa	D
+
+		bsp_pga	D
+		bsp_pyr	D
+		bsp_e4p	D
+		bsp_rib5p	D
+		bsp_pep	D
+		bsp_accoa	D
+		bsp_akg	D
+		bsp_oaa	D
+
+		// Output fluxes
+
+		out_Gnt	D
+		out_Kdg	D
+		out_co2	D
+
+
+EQUALITIES
+	NET
+		VALUE	FORMULA
+
+		1	Glc_in_1+Glc_in_U
+		0	fum_a-fum_b
+
+//biomass function
+
+		0	bs_glc6P-0.17556*BM
+		0	bs_fru6P-0.06924*BM
+		0	bs_ga3p-0.67629*BM
+		0	bs_pga-0.34247*BM
+		0	bs_pyr-0.1088*BM
+		0	bs_e4p-1.09542*BM
+		0	bs_rib5p-0.72204*BM
+		0	bs_pep-1.77418*BM
+		0	bs_accoa-2.53331*BM
+		0	bs_akg-0.96807*BM
+		0	bs_oaa-1.36495*BM
+		0	gntk-20.3*kdgk
+
+//protein function
+
+		0	bsp_rib5p-0.4025*prot
+		0	bsp_e4p-0.8913*prot
+		0	bsp_pga-1.1644*prot
+		0	bsp_pep-1.6532*prot
+		0	bsp_pyr-4.6576*prot
+		0	bsp_accoa-0.7331*prot
+		0	bsp_oaa-3.1338*prot
+		0	bsp_akg-1.5094*prot
+
+
+	XCH
+		VALUE	FORMULA
+
+		0	fum_a-fum_b
+
+
+INEQUALITIES
+	NET
+		VALUE	COMP	FORMULA
+
+		0.0001	<=	gcd
+		0.0001	<=	gad
+		0.0001	<=	glk
+		0.0001	<=	gntk
+		0.0001	<=	kdgk
+		0.0001	<=	kgud
+		0.0001	<=	maldh
+		0.0001	<=	edd
+		0.0001	<=	gnd
+		0.0001	<=	zwf
+		0.0001	<=	ppc
+		0.0001	<=	aceA
+		0.0001	<=	mae
+		0.0001	<=	pyc
+
+	XCH
+		VALUE	COMP	FORMULA
+
+
+FLUX_MEASUREMENTS
+	FLUX_NAME	VALUE	DEVIATION
+	out_Gnt	0.13	0.013
+	out_Kdg	0.055517	0.0055517
+	BM	0.0633656	0.006
+	prot	0.0019	0.00019
+
+
+
+LABEL_INPUT
+	META_NAME	ISOTOPOMER	VALUE
+
+	Glc_U	#111111	1
+	Glc_1	#100000	1
+	CO2_ext	#0	1
+
+
+LABEL_MEASUREMENTS
+	META_NAME	CUM_GROUP	VALUE	DEVIATION	CUM_CONSTRAINTS
+
+
+PEAK_MEASUREMENTS
+
+	META_NAME	PEAK_NO	VALUE_S	VALUE_D-	VALUE_D+	VALUE_DD	VALUE_T	DEVIATION_S	DEVIATION_D-	DEVIATION_D+	DEVIATION_DD/T
+
+
+MASS_SPECTROMETRY
+
+	META_NAME	FRAGMENT	WEIGHT	VALUE	DEVIATION
+
+	PGA	1,2,3	0	0.775523696	0.02
+			1	0.025671119	0.02
+			2	0	0.02
+			3	0.198805185	0.02
+	Gnt6P	1,2,3,4,5,6	0	0.065876094	0.03
+			1	0.784257817	0.03
+			2	0	0.03
+			3	0.001193741	0.03
+			4	8.13212E-05	0.03
+			5	0	0.03
+			6	0.148591027	0.03
+//	AKG	1,2,3,4,5	0	0.620829645	0.05
+//	AKG	1,2,3,4,5	1	0.178398557	0.05
+//			2	0.113523152	0.05
+//			3	0.044485783	0.05
+//			4	0	0.05
+//			5	0.042762862	0.05
+//	ICit	1,2,3,4,5,6	0	0.395024058	0.02
+	ICit	1,2,3,4,5,6	1	0.366414881	0.02
+			2	0.09875488	0.02
+			3	0.087242795	0.02
+			4	0.045300871	0.02
+			5	0.005789025	0.02
+			6	0.001473491	0.02
+	Fru6P	1,2,3,4,5,6	0	0.558704549	0.02
+			1	0.173334892	0.02
+			2	0.012655106	0.02
+			3	0.219972896	0.02
+			4	0.006572176	0.02
+			5	9.53549E-05	0.02
+			6	0.028665027	0.02
+	FruBP	1,2,3,4,5,6	0	0.658049909	0.02
+			1	0	0.02
+			2	0	0.02
+			3	0.316614711	0.02
+			4	0	0.02
+			5	0	0.02
+			6	0.025335381	0.02
+//	Glc6P	1,2,3,4,5,6	0	0.247442768	0.097951846
+//			1	0.651656203	0.110792983
+//			2	0	0.02
+//			3	0.050811461	0.029142171
+//			4	0.001264199	0.02
+//			5	7.09631E-05	0.02
+//			6	0.048754406	0.02
+	Mal	1,2,3,4	0	0.68512908	0.068313046
+			1	0.184044126	0.05
+			2	0.09495025	0.05
+			3	0.021908352	0.05
+			4	0.013968192	0.05
+	Rib5P	1,2,3,4,5	0	0.775876814	0.054765912
+			1	0.038889103	0.03
+			2	0.06600865	0.070778822
+			3	0.085650015	0.044487516
+			4	0.011229151	0.03
+			5	0.022346267	0.03
+	PEP	1,2,3	0	0.769029099	0.02
+			1	0.064053546	0.02
+			2	0	0.02
+			3	0.166917355	0.02
+	Sed7P	1,2,3,4,5,6,7	0	0.504972872	0.02
+			1	0.148199105	0.02
+			2	0.094810095	0.02
+			3	0.181869221	0.02
+			4	0.044067465	0.02
+			5	0.013533717	0.02
+			6	0.009247384	0.02
+			7	0.003300141	0.02
+//	Suc	1,2,3,4	0	0.723329188	0.06705
+	Suc	1,2,3,4	1	0.126168176	0.05
+			2	0.137436409	0.05
+			3	0.009095702	0.05
+			4	0.003970525	0.05
+
+
+OPTIONS
+	OPT_NAME	OPT_VALUE
+	commandArgs	--sln --zc=1.e-5 --clownr=1.e-5
+	MATLAB_FOR_FLUX_EQ_CONSTR_MATR	1
+

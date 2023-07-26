@@ -1,0 +1,46 @@
+"D:\Users\vogeleer\Anaconda3\Scripts\influx_s-script.py" ".\FTBL33A_condition2_Glc6Pcommenté.ftbl"
+code gen: 2022-05-16 14:05:50
+executing: "D:\Users\vogeleer\Anaconda3\python.exe" "D:\Users\vogeleer\Anaconda3\Scripts\ftbl2optR.py" "--clownr" "--tblimit" "0" "--ropts" "clownr=1e-05; sln=TRUE; zc=1e-05" ".\FTBL33A_condition2_Glc6Pcommenté.ftbl"
+executing: R --vanilla --slave < .\FTBL33A_condition2_Glc6Pcommenté.R
+calcul  : 2022-05-16 14:05:50
+Starting point
+The following 5 inequalities are not respected at starting point:
+n:0.0001<=ppc	-1.40847300025
+n:0.0001<=aceA	-2.71812219945001
+n:0.0001<=mae	-1.1088740424
+inout d.n.out_Gnt>=0	-1.48
+d.n.aceB>=1e-05	-2.71803219945001
+The following 2 zerocross inequalities are redundant and are removed:
+zc d.n.ald>=1e-05
+zc d.n.tpi>=1e-05
+it=0	res=30.22325
+it=1	res=17.60853	normstep=13.14276	btk=1
+it=2	res=11.00747	normstep=46.96646	btk=0.9021586
+it=3	res=10.26835	normstep=264.8146	btk=0.1600033
+it=4	res=10.0462	normstep=713.2681	btk=0.05940431
+it=5	res=9.877897	normstep=856.2526	btk=0.04948446
+it=6	res=9.715044	normstep=813.8888	btk=0.05206018
+it=7	res=9.557288	normstep=771.5218	btk=0.05491899
+it=8	res=9.404319	normstep=729.1537	btk=0.05811011
+it=9	res=9.255801	normstep=686.7849	btk=0.06169501
+it=10	res=9.111447	normstep=644.416	btk=0.06575132
+it=20	res=7.594208	normstep=220.7281	btk=0.191961
+it=30	res=5.818214	normstep=0.005325137	btk=1
+it=36	res=5.818189	normstep=1.16874e-06	btk=1
+The following inequalities are active after first pass
+   of zero crossing strategy and will be inverted:
+zc d.n.tk1<=-1e-05
+Second zero crossing pass
+it=0	res=5.818247
+it=1	res=5.817309	normstep=0.02361824	btk=1
+it=2	res=5.817172	normstep=0.01468095	btk=1
+it=3	res=5.816863	normstep=0.01379402	btk=0.5217348
+it=4	res=5.816854	normstep=0.005681177	btk=0.4323964
+it=5	res=5.816854	normstep=0.00037193	btk=1
+it=6	res=5.816854	normstep=0.0006309615	btk=0.4364793
+it=7	res=5.816854	normstep=1.332424	btk=0.5054793
+it=8	res=5.816854	normstep=2.176582e-05	btk=0.4243279
+Last zero crossing pass (free of zc constraints)
+it=0	res=5.816854
+end     : 2022-05-16 14:05:54
+=>Check .\FTBL33A_condition2_Glc6Pcommenté.err

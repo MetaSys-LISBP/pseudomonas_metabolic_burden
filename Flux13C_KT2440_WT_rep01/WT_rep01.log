@@ -1,0 +1,48 @@
+"D:\Users\vogeleer\Anaconda3\Scripts\influx_s-script.py" ".\FTBL17A_condition2_v1.ftbl"
+code gen: 2022-06-02 17:45:47
+executing: "D:\Users\vogeleer\Anaconda3\python.exe" "D:\Users\vogeleer\Anaconda3\Scripts\ftbl2optR.py" "--clownr" "--tblimit" "0" "--ropts" "clownr=1e-05; sln=TRUE; zc=1e-05" ".\FTBL17A_condition2_v1.ftbl"
+executing: R --vanilla --slave < .\FTBL17A_condition2_v1.R
+calcul  : 2022-06-02 17:45:47
+Starting point
+The following 5 inequalities are not respected at starting point:
+n:0.0001<=ppc	-1.47682523666667
+n:0.0001<=aceA	-2.76663250466668
+n:0.0001<=mae	-1.080445312
+inout d.n.out_Gnt>=0	-1.48
+d.n.aceB>=1e-05	-2.76654250466668
+The following 2 zerocross inequalities are redundant and are removed:
+zc d.n.ald>=1e-05
+zc d.n.tpi>=1e-05
+it=0	res=101.1343
+it=1	res=28.01672	normstep=3.376513	btk=1
+it=2	res=22.21851	normstep=3.867924	btk=1
+it=3	res=14.56941	normstep=1.130999	btk=1
+it=4	res=6.907354	normstep=0.4165489	btk=1
+it=5	res=5.538025	normstep=0.1594937	btk=1
+it=6	res=5.192282	normstep=0.1550029	btk=1
+it=7	res=5.177052	normstep=0.05832718	btk=1
+it=8	res=5.176517	normstep=0.06823206	btk=1
+it=9	res=5.174916	normstep=0.08724625	btk=0.3278268
+it=10	res=5.174791	normstep=0.01359792	btk=1
+it=19	res=5.174666	normstep=5.052037e-06	btk=1
+The following inequalities are active after first pass
+   of zero crossing strategy and will be inverted:
+zc d.n.tk1>=1e-05
+Second zero crossing pass
+it=0	res=5.291362
+it=1	res=5.172584	normstep=0.02534116	btk=1
+it=2	res=5.172291	normstep=0.01947422	btk=1
+it=3	res=5.171981	normstep=0.02066729	btk=0.4792136
+it=4	res=5.171976	normstep=0.004841182	btk=1
+it=5	res=5.171968	normstep=0.005309286	btk=0.4581669
+it=6	res=5.171968	normstep=0.0006144318	btk=1
+it=7	res=5.171968	normstep=0.0004480387	btk=0.469883
+it=8	res=5.171968	normstep=0.0001227129	btk=1
+it=9	res=5.171968	normstep=0.0001175941	btk=0.4608126
+it=10	res=5.171968	normstep=2.918778e-05	btk=1
+it=12	res=5.171968	normstep=6.320056e-06	btk=1
+Last zero crossing pass (free of zc constraints)
+it=0	res=5.171968
+it=1	res=5.171968	normstep=3.650966e-06	btk=0.468247
+end     : 2022-06-02 17:45:51
+=>Check .\FTBL17A_condition2_v1.err

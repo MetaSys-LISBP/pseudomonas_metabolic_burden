@@ -1,0 +1,59 @@
+"D:\Users\vogeleer\Anaconda3\Scripts\influx_s-script.py" ".\FTBL30B_condition2.ftbl"
+code gen: 2022-04-20 10:04:26
+executing: "D:\Users\vogeleer\Anaconda3\python.exe" "D:\Users\vogeleer\Anaconda3\Scripts\ftbl2optR.py" "--clownr" "--tblimit" "0" "--ropts" "clownr=1e-05; sln=TRUE; zc=1e-05" ".\FTBL30B_condition2.ftbl"
+executing: R --vanilla --slave < .\FTBL30B_condition2.R
+calcul  : 2022-04-20 10:04:27
+Starting point
+The following 5 inequalities are not respected at starting point:
+n:0.0001<=ppc	-1.53964775645101
+n:0.0001<=aceA	-2.87392420077249
+n:0.0001<=mae	-1.0931619797632
+inout d.n.out_Gnt>=0	-1.48
+d.n.aceB>=1e-05	-2.87383420077249
+The following 2 zerocross inequalities are redundant and are removed:
+zc d.n.ald>=1e-05
+zc d.n.tpi>=1e-05
+it=0	res=21.3162
+it=1	res=19.7303	normstep=7.923645	btk=1
+it=2	res=10.68812	normstep=7.125419	btk=1
+it=3	res=9.165536	normstep=2.774925	btk=1
+it=4	res=6.700422	normstep=2.748689	btk=1
+it=5	res=6.643335	normstep=1.093173	btk=1
+it=6	res=6.634746	normstep=1.017829	btk=1
+it=7	res=6.634682	normstep=0.02173669	btk=1
+it=8	res=6.634677	normstep=0.01173061	btk=1
+it=9	res=6.634677	normstep=0.002529632	btk=1
+it=10	res=6.634677	normstep=0.0008900402	btk=1
+it=14	res=6.634677	normstep=4.406261e-06	btk=1
+The following inequalities are active after first pass
+   of zero crossing strategy and will be inverted:
+zc d.n.tk2<=-1e-05
+Second zero crossing pass
+it=0	res=7.127316
+it=1	res=6.634777	normstep=1.001741	btk=1
+it=2	res=6.634749	normstep=1.000968	btk=1
+it=3	res=6.634748	normstep=0.009537484	btk=1
+it=4	res=6.634748	normstep=0.003277366	btk=1
+it=5	res=6.634748	normstep=0.0008283872	btk=1
+it=6	res=6.634748	normstep=0.0002479639	btk=1
+it=7	res=6.634748	normstep=6.938023e-05	btk=1
+it=8	res=6.634748	normstep=2.007967e-05	btk=1
+it=9	res=6.634748	normstep=5.777501e-06	btk=1
+Last zero crossing pass (free of zc constraints)
+it=0	res=6.634748
+it=1	res=6.634687	normstep=0.08711845	btk=0.003905476
+it=2	res=6.634677	normstep=0.007547628	btk=0.015625
+it=3	res=6.634675	normstep=0.007413545	btk=0.00390625
+it=4	res=6.634673	normstep=0.007380684	btk=0.00390625
+it=5	res=6.634673	normstep=0.007347988	btk=0.0002441406
+it=6	res=6.634673	normstep=0.007345954	btk=0.0002441406
+it=7	res=6.634672	normstep=0.007343921	btk=0.0002441406
+it=8	res=6.634672	normstep=0.007341889	btk=6.103516e-05
+it=9	res=6.634672	normstep=0.007341381	btk=3.814697e-06
+it=10	res=6.634672	normstep=0.007341349	btk=1.704868e-06
+it=20	res=6.634672	normstep=0.007341283	btk=3.814697e-06
+it=30	res=6.634672	normstep=0.007341176	btk=1e-07
+it=40	res=6.634672	normstep=0.08691353	btk=5.728972e-06
+it=50	res=6.634672	normstep=0.007341119	btk=1.525879e-05
+end     : 2022-04-20 10:04:34
+=>Check .\FTBL30B_condition2.err

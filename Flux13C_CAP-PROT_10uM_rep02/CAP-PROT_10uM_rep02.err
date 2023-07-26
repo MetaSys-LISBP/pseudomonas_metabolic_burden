@@ -1,0 +1,52 @@
+warning in first optimization pass: lsi_ln: Rank deficient matrix in least squares
+2 free variable(s):
+	23
+	24
+Least L2-norm solution is provided.
+lsi_ln: Rank deficient matrix in least squares
+2 free variable(s):
+	23
+	25
+Least L2-norm solution is provided.
+lsi_ln: Unfeasible constraints in null space. (It must not be. Round off errors struck again.)
+lsi_ln: Rank deficient matrix in least squares
+3 free variable(s):
+f.x.ald	13
+f.x.fum_a	15
+f.x.tpi	24
+Least L2-norm solution is provided.
+second zero crossing pass: nlsic: LSI returned not descending direction
+lsi_ln: Rank deficient matrix in least squares
+3 free variable(s):
+	24
+	25
+	26
+Least L2-norm solution is provided.
+lsi_ln: Unfeasible constraints in null space. (It must not be. Round off errors struck again.)
+lsi_ln: Rank deficient matrix in least squares
+3 free variable(s):
+f.x.ald	13
+f.x.fum_a	15
+f.x.tpi	24
+Least L2-norm solution is provided.
+last zero crossing (free of zc): nlsic: LSI returned not descending direction
+lsi_ln: Rank deficient matrix in least squares
+3 free variable(s):
+	24
+	25
+	26
+Least L2-norm solution is provided.
+lsi_ln: Unfeasible constraints in null space. (It must not be. Round off errors struck again.)
+lsi_ln: Rank deficient matrix in least squares
+3 free variable(s):
+f.x.ald	13
+f.x.fum_a	15
+f.x.tpi	24
+Least L2-norm solution is provided.
+Inverse of covariance matrix is numerically singular.
+Statistically undefined parameter(s) seems to be:
+f.x.ald
+f.x.fum_a
+f.x.tpi
+For more complete list, see sd columns in '/linear stats'
+in the result file.

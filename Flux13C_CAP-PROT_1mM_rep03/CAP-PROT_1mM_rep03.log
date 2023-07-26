@@ -1,0 +1,33 @@
+"D:\Users\vogeleer\Anaconda3\Scripts\influx_s-script.py" ".\FTBL36A_condition2.ftbl"
+code gen: 2022-04-26 11:46:25
+executing: "D:\Users\vogeleer\Anaconda3\python.exe" "D:\Users\vogeleer\Anaconda3\Scripts\ftbl2optR.py" "--clownr" "--tblimit" "0" "--ropts" "clownr=1e-05; sln=TRUE; zc=1e-05" ".\FTBL36A_condition2.ftbl"
+executing: R --vanilla --slave < .\FTBL36A_condition2.R
+calcul  : 2022-04-26 11:46:25
+Starting point
+The following 5 inequalities are not respected at starting point:
+n:0.0001<=ppc	-1.49728393166667
+n:0.0001<=aceA	-2.79305666966668
+n:0.0001<=mae	-1.079310864
+inout d.n.out_Gnt>=0	-1.48
+d.n.aceB>=1e-05	-2.79296666966668
+The following 2 zerocross inequalities are redundant and are removed:
+zc d.n.ald>=1e-05
+zc d.n.tpi>=1e-05
+it=0	res=22.23229
+it=1	res=21.18418	normstep=9.951738	btk=1
+it=2	res=17.10586	normstep=10.8125	btk=1
+it=3	res=12.5639	normstep=129.6334	btk=0.3427336
+it=4	res=12.23099	normstep=952.6449	btk=0.04663827
+it=5	res=11.89396	normstep=908.1995	btk=0.04892065
+it=6	res=11.55614	normstep=863.7635	btk=0.05143736
+it=7	res=11.21779	normstep=819.3282	btk=0.054227
+it=8	res=10.87899	normstep=774.8928	btk=0.05733659
+it=9	res=10.54128	normstep=730.461	btk=0.06082421
+it=10	res=10.20527	normstep=686.0295	btk=0.06476356
+it=20	res=7.355981	normstep=222.1467	btk=0.2000017
+it=30	res=6.534982	normstep=0.1902337	btk=1
+it=40	res=6.530864	normstep=1.419902e-05	btk=1
+it=41	res=6.530864	normstep=5.244337e-06	btk=1
+After the first optimization, no zero crossing inequality was activated. So no reoptimization
+end     : 2022-04-26 11:46:30
+=>Check .\FTBL36A_condition2.err
